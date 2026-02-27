@@ -375,17 +375,17 @@ body::before {
   .hero .container {
     grid-template-columns: 1fr;
     gap: 12px;
-    /* center items horizontally so the image sits in the middle */
-    align-items: center;
+    /* allow text to start at top while keeping image centered */
+    align-items: start;
     justify-items: center;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* center text on narrow viewports so everything feels balanced */
+  /* keep text left-aligned on mobile, only image should center */
   .hero-content {
     padding-right: 0;
-    text-align: center;
+    text-align: left;
   }
 
   /* show image under text, centered */
