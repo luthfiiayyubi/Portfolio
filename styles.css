@@ -375,15 +375,17 @@ body::before {
   .hero .container {
     grid-template-columns: 1fr;
     gap: 12px;
-    align-items: start;
+    /* center items horizontally so the image sits in the middle */
+    align-items: center;
+    justify-items: center;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* keep text left-aligned on mobile */
+  /* center text on narrow viewports so everything feels balanced */
   .hero-content {
     padding-right: 0;
-    text-align: left;
+    text-align: center;
   }
 
   /* show image under text, centered */
@@ -392,6 +394,8 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* ensure the flex container spans full width */
+    margin: 0 auto;
   }
 
   /* use the 1:1 photo but constrain size and keep it centered */
