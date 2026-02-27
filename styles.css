@@ -324,6 +324,7 @@ body::before {
 .hero-image {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .hero-img {
@@ -333,6 +334,59 @@ body::before {
   border-radius: 20px;
   border: 2px solid var(--primary-color);
   box-shadow: 0 0 40px rgba(0, 212, 255, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+/* Desktop arrow animation - behind and to the right of image */
+.scroll-indicator {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: -8px;
+  z-index: 1;
+}
+
+.arrow-down {
+  font-size: 48px;
+  color: var(--primary-color);
+  animation: bounce-arrow 2s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  opacity: 0.6;
+  line-height: 0.6;
+}
+
+.arrow-1 {
+  animation-delay: 0s;
+}
+
+.arrow-2 {
+  animation-delay: 0.2s;
+}
+
+.arrow-3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce-arrow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 0.9;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
 }
 
 @keyframes pulse {
@@ -396,6 +450,7 @@ body::before {
     align-items: center;
     width: 100%; /* ensure the flex container spans full width */
     margin: 0 auto;
+    position: relative;
   }
 
   /* use the 1:1 photo but constrain size and keep it centered */
@@ -408,6 +463,22 @@ body::before {
     border-radius: 12px;
     box-shadow: none;
     border-width: 1px;
+  }
+
+  /* animated down arrows next to image on mobile - in empty space */
+  .scroll-indicator {
+    position: absolute;
+    right: auto;
+    left: 50%;
+    top: 50%;
+    transform: translateX(calc(80px + 10px)) translateY(-50%);
+    gap: -6px;
+  }
+
+  .arrow-down {
+    font-size: 32px;
+    opacity: 1;
+    line-height: 0.5;
   }
 
   /* tighten heading spacing on small screens */
