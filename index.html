@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Your Name</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">{"Portfolio"}</a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>
+            <span class="typing-text">Hi, I'm</span
+            ><span class="highlight">Muhammad Luthfi Al Ayyubi Hidayat</span>
+          </h1>
+          <p>
+            Computer Science Student | Front-End Developer | UI/UX Enthusiast
+          </p>
+          <a href="#projects" class="cta-button">Explore Projects</a>
+        </div>
+
+        <div class="hero-image">
+          <img src="image/hero.jpg" alt="Muhammad Luthfi" class="hero-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I am a Computer Science student at Bina Nusantara University with
+              a strong interest in software development and modern digital
+              technologies. I enjoy turning ideas into functional and
+              user-friendly solutions through design and code.
+            </p>
+
+            <p>
+              Through academic projects, workshops, and tech community
+              involvement, I continuously develop my technical skills,
+              problem-solving abilities, and collaboration experience. I am
+              eager to keep learning and building projects that create
+              meaningful impact.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <h3>3+</h3>
+              <p>Tech Projects Completed</p>
+            </div>
+
+            <div class="stat">
+              <h3>2+</h3>
+              <p>Tech Communities Joined</p>
+            </div>
+
+            <div class="stat">
+              <h3>4+</h3>
+              <p>Certifications & Workshops</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fas fa-code"></i>
+            <h3>Front-end Development</h3>
+            <p>HTML, CSS, UI Design, Responsive Layout</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-server"></i>
+            <h3>Design & Tools</h3>
+            <p>Figma, Canva, VS Code, Xcode</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-cloud"></i>
+            <h3>Productivity Tools</h3>
+            <p>MS Office, Google Sheets, Notion</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Soft Skills</h3>
+            <p>
+              Team Collaboration, Communication, Responsibility, Creative
+              Thinking
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card" onclick="openModal('fumart')">
+            <div class="project-image">
+              <div class="gallery" data-project="fumart">
+                <img
+                  src="image/fumart1.png"
+                  alt="Fumart Image 1"
+                  class="gallery-image"
+                />
+                <button
+                  class="gallery-nav prev"
+                  onclick="
+                    event.stopPropagation();
+                    prevImage('fumart');
+                  "
+                >
+                  ❮
+                </button>
+                <button
+                  class="gallery-nav next"
+                  onclick="
+                    event.stopPropagation();
+                    nextImage('fumart');
+                  "
+                >
+                  ❯
+                </button>
+                <div class="gallery-counter">
+                  <span class="current">1</span>/<span class="total">2</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Fumart Authentication Page</h3>
+              <p>
+                Front-end mini project focused on creating a modern Login &
+                Registration interface using HTML and CSS based on a Figma
+                design.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Figma</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="openModal('inget')">
+            <div class="project-image">
+              <div class="gallery" data-project="inget">
+                <img
+                  src="image/inget1.png"
+                  alt="inget Image 1"
+                  class="gallery-image"
+                />
+                <button
+                  class="gallery-nav prev"
+                  onclick="
+                    event.stopPropagation();
+                    prevImage('inget');
+                  "
+                >
+                  ❮
+                </button>
+                <button
+                  class="gallery-nav next"
+                  onclick="
+                    event.stopPropagation();
+                    nextImage('inget');
+                  "
+                >
+                  ❯
+                </button>
+                <div class="gallery-counter">
+                  <span class="current">1</span>/<span class="total">1</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>inget.in — AI Smart Scheduling Assistant</h3>
+              <p>
+                AI-powered scheduling assistant concept that helps students
+                detect schedule conflicts and optimize productivity.
+              </p>
+              <div class="project-tags">
+                <span class="tag">UI/UX</span>
+                <span class="tag">Mobile App Concept</span>
+                <span class="tag">Figma</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="openModal('poster')">
+            <div class="project-image">
+              <div class="gallery" data-project="poster">
+                <img
+                  src="image/poster1.png"
+                  alt="Poster Image 1"
+                  class="gallery-image"
+                />
+                <button
+                  class="gallery-nav prev"
+                  onclick="
+                    event.stopPropagation();
+                    prevImage('poster');
+                  "
+                >
+                  ❮
+                </button>
+                <button
+                  class="gallery-nav next"
+                  onclick="
+                    event.stopPropagation();
+                    nextImage('poster');
+                  "
+                >
+                  ❯
+                </button>
+                <div class="gallery-counter">
+                  <span class="current">1</span>/<span class="total">1</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>The Future of AI Innovation — Event Poster</h3>
+              <p>
+                Poster design created for BNCC Quest with futuristic AI-themed
+                visual concept.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Graphic Design</span>
+                <span class="tag">Poster</span>
+                <span class="tag">Figma</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="experience-list">
+          <div class="experience-item">
+            <h3>Stargifest Event — Logistic Staff</h3>
+            <span class="experience-date">2024</span>
+            <p>
+              Responsible for managing event logistics and ensuring smooth
+              operational flow. Managed preparation and distribution of event
+              materials, coordinated with team members for timely setup, and
+              maintained inventory control during the event.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>BNCC (Bina Nusantara Computer Club) — Activist</h3>
+            <span class="experience-date">2025 – Present</span>
+            <p>
+              Selected as an official activist member of BNCC 37. Participated
+              in technology workshops, collaborative learning sessions, and
+              internal development programs including Technology Project Member
+              (TPM). Contributed to internal tech initiatives and event
+              coordination.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Amgala Foundation — Volunteer (Science Fun Day)</h3>
+            <span class="experience-date">2026</span>
+            <p>
+              Contributed to a community-based educational program focused on
+              interactive science learning. Assisted in organizing hands-on
+              activities and supported student engagement to create a positive
+              learning environment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <p class="contact-subtitle">
+          I'd love to hear from you. Let's create something amazing together.
+        </p>
+
+        <div class="contact-content">
+          <div class="contact-form">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xvzblywl"
+              method="POST"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-button">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>luthfi.h887@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+62 8595 0793 794</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Jakarta, Indonesia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a
+            href="https://www.linkedin.com/in/luthfiiayyubi/"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#contact" class="social-link"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-body">
+          <img id="modalImage" src="" alt="Project Image" />
+          <div id="navContainer" class="modal-nav-container"></div>
+        </div>
+        <div class="modal-counter">
+          <span class="current">1</span>/<span class="total">1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2026 Muhammad Luthfi Al Ayyubi Hidayat. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
